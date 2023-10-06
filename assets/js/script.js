@@ -293,3 +293,31 @@ accordionBtn.forEach((item, index) => {
     });
   });
 });
+
+// Scroll to TOP
+let upBtn = document.querySelector("#btn-up");
+
+if(window.scrollY >= 600){
+  upBtn.style.display = 'flex';
+    console.log(window.scrollY)
+}
+else{
+  upBtn.style.display = 'none';
+}
+
+window.onscroll = () => {
+  if(window.scrollY >= 600){
+    upBtn.style.display = 'flex';
+      console.log(window.scrollY)
+  }
+  else{
+    upBtn.style.display = 'none';
+  }
+}
+
+upBtn.onclick = function () {
+  window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+  });
+};

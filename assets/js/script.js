@@ -196,7 +196,7 @@ function arrivalCards(arr) {
     <div class="card-header position-relative overflow-hidden">
     <img src=${arr[index].images[0]} class="w-100 object-fit-cover" alt="">
     <div class="add-to-cart d-flex justify-content-center align-items-center bg-dark w-100">
-    <a class="text-decoration-none text-white p-2" onclick="addToCart()">Add To Cart</a>
+    <a class="text-decoration-none text-white p-2" onclick="addToCart(${arr[index].images[0]})">Add To Cart</a>
     </div>
     </div>
     <div class="card-body d-flex flex-column justify-content-center align-items-center p-1">
@@ -209,6 +209,32 @@ function arrivalCards(arr) {
     `;
   }
 }
+
+// Add to Cart
+let cartBody = document.querySelector(".cart-body");
+function addToCart(arr) {
+  console.log()
+  // cartBody.innerHTML += `
+  // <div class="item">
+  //   <div class="item-img">
+  //     <img src="./assets/imgs/arrival1.png" alt="">
+  //   </div>
+  //   <div class="item-text">
+  //     <h5>Affinity P40 Pro</h5>
+  //     <p>Color: Black,</p>
+  //     <p>Inches: 6.18,</p>
+  //     <p>SIM Type: Dual SIM</p>
+  //     <p class="fw-bold">$1200</p>
+  //     <div class="item-count">
+  //       <button class="btn btn-light" onclick="plus()">+</button>
+  //       <button class="btn btn-light item-count-number">1</button>
+  //       <button class="btn btn-light" oclick="minus()">-</button>
+  //     </div>
+  //   </div>
+  // </div>
+  // `;
+}
+
 
 // Arrival Swiper
 
@@ -248,30 +274,6 @@ nextBtn.addEventListener("click", () => {
   }
 });
 
-// Add to Cart
-let cartBody = document.querySelector(".cart-body");
-
-function addToCart() {
-  cartBody.innerHTML += `
-  <div class="item">
-    <div class="item-img">
-      <img src="./assets/imgs/arrival1.png" alt="">
-    </div>
-    <div class="item-text">
-      <h5>Affinity P40 Pro</h5>
-      <p>Color: Black,</p>
-      <p>Inches: 6.18,</p>
-      <p>SIM Type: Dual SIM</p>
-      <p class="fw-bold">$1200</p>
-      <div class="item-count">
-        <button class="btn btn-light" onclick="plus()">+</button>
-        <button class="btn btn-light item-count-number">1</button>
-        <button class="btn btn-light" oclick="minus()">-</button>
-      </div>
-    </div>
-  </div>
-  `;
-}
 
 // Customers Accordion
 let accordionBtn = document.querySelectorAll(".customers .accordion-button");

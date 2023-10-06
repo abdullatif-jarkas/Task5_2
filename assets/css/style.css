@@ -209,6 +209,7 @@ header nav .flags-menu ul.list-inline {
     transform: translate(-50%, -50%);
     background-color: #000;
     color: white;
+    width: 70%;
   }
   .hero .hero-text-two {
     left: 50%;
@@ -216,6 +217,7 @@ header nav .flags-menu ul.list-inline {
     transform: translate(-50%, -50%);
     background-color: #FFF;
     color: black;
+    width: 70%;
   }
 }
 @media screen and (min-width: 576px) {

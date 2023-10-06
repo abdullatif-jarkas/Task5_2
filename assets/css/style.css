@@ -38,9 +38,11 @@
   right: -300px;
   background-color: #FFF;
   z-index: 9999999;
+  display: none;
 }
 .cart-shown {
   right: 0;
+  display: flex;
 }
 .overlay-shown {
   opacity: 1;

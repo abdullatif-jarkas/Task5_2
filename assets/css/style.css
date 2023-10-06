@@ -92,13 +92,17 @@ header nav .flags-menu ul.list-inline {
   min-width: 120px;
   width: max-content;
 }
-
 .sidebar {
-  height: fit-content;
+  height: calc(100vh - 76px);
   border: 1px solid #ddd;
   position: absolute;
   top: 76px !important;
   transition: .5s;
+}
+@media screen and (max-width: 575px) {
+  .sidebar {
+    height: calc(100vh - 125px);
+  }
 }
 .sidebar .active {
   background-color: #f6f6f6;

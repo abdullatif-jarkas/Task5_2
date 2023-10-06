@@ -210,31 +210,6 @@ function arrivalCards(arr) {
   }
 }
 
-// Add to Cart
-let cartBody = document.querySelector(".cart-body");
-function addToCart(arr) {
-  console.log()
-  // cartBody.innerHTML += `
-  // <div class="item">
-  //   <div class="item-img">
-  //     <img src="./assets/imgs/arrival1.png" alt="">
-  //   </div>
-  //   <div class="item-text">
-  //     <h5>Affinity P40 Pro</h5>
-  //     <p>Color: Black,</p>
-  //     <p>Inches: 6.18,</p>
-  //     <p>SIM Type: Dual SIM</p>
-  //     <p class="fw-bold">$1200</p>
-  //     <div class="item-count">
-  //       <button class="btn btn-light" onclick="plus()">+</button>
-  //       <button class="btn btn-light item-count-number">1</button>
-  //       <button class="btn btn-light" oclick="minus()">-</button>
-  //     </div>
-  //   </div>
-  // </div>
-  // `;
-}
-
 
 // Arrival Swiper
 

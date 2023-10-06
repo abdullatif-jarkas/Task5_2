@@ -103,7 +103,7 @@ header nav .flags-menu ul.list-inline {
 .sidebar .active {
   background-color: #f6f6f6;
 }
-.sidebar li:hover {
+.sidebar li:not(.sidebar .collection li):hover {
   background-color: #f6f6f6;
 }
 .sidebar .offcanvas-footer {
@@ -528,6 +528,47 @@ background-clip: text;
   background-position: center;
   background-size: cover;
 }
+.accordion-button::after, .accordion-button:not(.collapsed)::after {
+  content: unset;
+  background-image: unset;
+}
+.menu-item{
+  width: 30px;
+  height: 27px;
+  position: relative;
+  cursor: pointer;
+}
+.customers .menu-item span{
+  width: 30px;
+  height: 4px;
+  background-color: #FFF;
+  position: absolute;
+  transition: .5s;
+  border-radius: 15px;
+}
+.customers .menu-item span:first-child{
+  top: 0px;
+}
+.customers .menu-item span:nth-child(2){
+  top: 11px;
+}
+.customers .menu-item span:last-child{
+  top: 23px;
+}
+.one-hover {
+  top: 11px !important;
+  transform: rotate(-135deg);
+  background-color: #e86167;
+}
+.two-hover {
+  opacity: 0;
+}
+.three-hover {
+  top: 11px !important;
+  transform: rotate(135deg);
+  background-color: #e86167;
+}
+
 /* End Customers */
 /* Start Footer */
 footer {

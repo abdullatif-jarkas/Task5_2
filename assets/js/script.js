@@ -232,11 +232,48 @@ function addToCart() {
     </div>
   </div>
   `
-  let itemCountNumber = document.querySelector('.item-count-number');
 }
-function plus() {
-  // let count = itemCountNumber.innerHTML;
-  console.log("count")
-}
-function minus() { 
-}
+
+// Customers Accordion
+let accordionBtn = document.querySelectorAll('.customers .accordion-button');
+accordionBtn.forEach((item, index) => {
+  let menuItem = document.querySelector(`.menu-item-${index}`);
+  if(menuItem.parentElement.classList.contains('collapsed')) {
+    menuItem.innerHTML = `
+    <div class="menu-item">
+      <span class="one"></span>
+      <span class="two"></span>
+      <span class="three"></span>
+    </div>
+    `
+  } else {
+    menuItem.innerHTML = `<i class="fa-solid fa-x fs-3"></i>`
+  }
+  item.addEventListener('click', () => {
+    if(menuItem.parentElement.classList.contains('collapsed')) {
+      menuItem.innerHTML = `
+      <div class="menu-item menu-item-3">
+        <span class="one"></span>
+        <span class="two"></span>
+        <span class="three"></span>
+      </div>
+      `
+    } else {
+      menuItem.innerHTML = `<i class="fa-solid fa-x fs-3"></i>`
+    }
+    accordionBtn.forEach((item, index) => {
+      let menuItem = document.querySelector(`.menu-item-${index}`);
+      if(menuItem.parentElement.classList.contains('collapsed')) {
+        menuItem.innerHTML = `
+        <div class="menu-item">
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
+        </div>
+        `
+      } else {
+        menuItem.innerHTML = `<i class="fa-solid fa-x fs-3"></i>`
+      }
+    })
+  })
+})

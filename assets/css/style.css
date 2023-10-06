@@ -92,6 +92,46 @@ header nav .flags-menu ul.list-inline {
   min-width: 120px;
   width: max-content;
 }
+header .navbar-nav li a:hover {
+  color: var(--text-hover) !important;
+}
+header nav .nav-menu-item {
+  width: 30px;
+  height: 27px;
+  position: relative;
+  cursor: pointer;
+}
+header nav .nav-menu-item span{
+  width: 30px;
+  height: 4px;
+  background-color: #212529;
+  position: absolute;
+  transition: .5s;
+  border-radius: 15px;
+  left: 0;
+}
+header nav .nav-menu-item span:first-child{
+  top: 0px;
+}
+header nav .nav-menu-item span:nth-child(2){
+  top: 11px;
+}
+header nav .nav-menu-item span:last-child{
+  top: 23px;
+}
+.one-hover {
+  top: 11px !important;
+  transform: rotate(-135deg);
+  background-color: #e86167;
+}
+.two-hover {
+  opacity: 0;
+}
+.three-hover {
+  top: 11px !important;
+  transform: rotate(135deg);
+  background-color: #e86167;
+}
 .sidebar {
   height: calc(100vh - 76px);
   border: 1px solid #ddd;
@@ -244,8 +284,12 @@ header nav .flags-menu ul.list-inline {
   }
 }
 /* End Hero */
-
 /* End Header */
+/* Start Extra Line */
+.extra-line {
+  background-color: #f9f9f9;
+}
+/* End Extra Line */
 /* Start What Makes Different Section */
 .section-header p {
   letter-spacing: 5px;
@@ -563,20 +607,6 @@ background-clip: text;
 .customers .menu-item span:last-child{
   top: 23px;
 }
-.one-hover {
-  top: 11px !important;
-  transform: rotate(-135deg);
-  background-color: #e86167;
-}
-.two-hover {
-  opacity: 0;
-}
-.three-hover {
-  top: 11px !important;
-  transform: rotate(135deg);
-  background-color: #e86167;
-}
-
 /* End Customers */
 /* Start Footer */
 footer {

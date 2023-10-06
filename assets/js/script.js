@@ -57,10 +57,17 @@ fetch("https://restcountries.com/v3.1/all")
   });
 
 // Showing Sidebar
-let togglerBtn = document.querySelector(".navbar-toggler");
+let togglerBtn = document.querySelector(".nav-menu-item");
+let firstSpan = document.querySelector(".nav-menu-item .one");
+let SecondSpan = document.querySelector(".nav-menu-item .two");
+let thirdSpan = document.querySelector(".nav-menu-item .three");
+
 let sideBar = document.querySelector(".sidebar");
 togglerBtn.addEventListener("click", () => {
   sideBar.classList.toggle("show");
+  firstSpan.classList.toggle("one-hover")
+  SecondSpan.classList.toggle("two-hover")
+  thirdSpan.classList.toggle("three-hover")
 });
 
 // Showing Collection and Pages list in sidebar
@@ -138,7 +145,7 @@ modalCloseBtn.forEach((element) => {
       let modalBackdrop = document.querySelectorAll(".modal-backdrop");
       modalBackdrop.forEach((back) => {
         back.style.opacity = 0;
-      })
+      });
       el.classList.remove("show");
     });
   });

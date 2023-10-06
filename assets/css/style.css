@@ -32,7 +32,7 @@
 }
 .cart {
   width: 300px;
-  height: 100vh;
+  height: 100%;
   position: absolute;
   top: 0;
   right: -300px;

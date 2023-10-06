@@ -5,9 +5,9 @@
 :root {
   --text-hover: #eb0028;
 }
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   display: none;
-}
+} */
 .fit-content {
   width: fit-content;
 }
@@ -422,6 +422,7 @@ header nav .flags-menu ul.list-inline {
 .unstoppable-price {
   background-image: url(./../imgs/unstoppable.jpg);
   background-attachment: fixed;
+  background-position: center;
 }
 /* End unstoppable */
 /* Start New Arrivals */
@@ -529,6 +530,7 @@ background-clip: text;
   background-image: url(./../imgs/customers-bg.jpg);
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
 }
 .accordion-button::after, .accordion-button:not(.collapsed)::after {
   content: unset;

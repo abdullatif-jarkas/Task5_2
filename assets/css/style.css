@@ -94,7 +94,7 @@ header nav .flags-menu ul.list-inline {
 }
 
 .sidebar {
-  height: calc(100vh - 76px);
+  height: fit-content;
   border: 1px solid #ddd;
   position: absolute;
   top: 76px !important;

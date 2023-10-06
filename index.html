@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="//phono-demo.myshopify.com/cdn/shop/files/favicon.png?crop=center&amp;height=32&amp;v=1622269929&amp;width=32">
+    <title>Document</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- CSS File -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body class="overflow-x-hidden">
+    <!-- Toast -->
+    <div class="toast rounded-0 show shadow-none bg-dark w-100" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header bg-dark text-white">
+        <h4 class="mx-auto">Long Weekend Sale Up to 50% OFF Shop Now</h4>
+        <div data-bs-theme="dark">
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+    <!-- Cart -->
+    <div class="cart-overlay"></div>
+    <div class="cart d-flex flex-column p-2">
+      <div class="cart-header d-flex justify-content-between align-items-center border-bottom p-2">
+        <h2>Your cart</h2>
+        <span class="btn btn-close"></span>
+      </div>
+      <div class="cart-body flex-grow-1 overflow-auto">
+      </div>
+      <div class="cart-footer d-flex flex-column border-top p-2">
+        <div class="totals d-flex justify-content-between">
+          <h5 class="fw-bold">Subtotal</h5>
+          <p>$2344</p>
+        </div>
+        <p>Taxes and shipping calculated at checkout</p>
+        <div class="checkout d-flex justify-content-between gap-2">
+          <a href="#" class="btn btn-dark px-4 py-2 rounded-pill">Update</a>
+          <a href="#" class="btn btn-dark px-4 py-2 rounded-pill">Check out</a>
+        </div>
+      </div>
+    </div>
+    <!-- Start Header -->
+    <header>
+      <!-- logo in small devices -->
+        <a class="d-block d-sm-none fit-content mx-auto pt-1" href="#"><img src="./assets/imgs/logo.jpg" alt="#"></a>
+      <!-- start nav -->
+      <nav class="navbar navbar-white flex-nowrap">
+        <div class="container-fluid pe-3 pe-xl-0 ps-0 ps-sm-5 justify-content-between">
+          <!-- Logo -->
+          <a class="navbar-brand fs-2 order-md-1 order-xl-0 d-none d-sm-block" href="#"><img src="./assets/imgs/logo.jpg" alt="#"></a>
+          <!-- Navbar Toggler -->
+          <button
+            class="navbar-toggler shadow-none border-0 d-block d-xl-none"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+            >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Offcanvas -->
+          <div class="sidebar offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 d-xl-flex ">
+                <li class="nav-item p-2 mb-1 mx-2 active">
+                  <a class="nav-link text-dark click0" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item p-2 mb-1 mx-2 collection-item">
+                  <a class="nav-link text-dark click2 d-flex justify-content-between align-items-center" href="#our-stuff">Collection <i class="fa-solid fa-arrow-right pe-3"></i></a>
+                </li>
+                <div class="collection overflow-auto">
+                  <button class="btn collection-back-btn"><i class="fa-solid fa-arrow-left pe-3"></i> Collection</button>
+                  <ul class="list-inline p-3">
+                    <li>
+                      <a href="#" class="text-decoration-none text-dark fw-bold">SSD Card</a>
+                      <ul class="list-inline">
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">Affinity M20</a>
+                        </li>
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">Affinity P40 Pro</a>
+                        </li>
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">PO V40 ThinQ</a>
+                        </li>
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">Tencho 7.3</a>
+                        </li>
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">Tencho 8.1</a>
+                        </li>
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">Nexian</a>
+                        </li>
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">Ningbo</a>
+                        </li>
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">Fix A Phone</a>
+                        </li>
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">Hisense</a>
+                        </li>
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">Force Cell</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#" class="text-decoration-none text-dark fw-bold">SSD Card</a>
+                      <ul class="list-inline">
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">Affinity M20</a>
+                        </li>
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">Affinity P40 Pro</a>
+                        </li>
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">PO V40 ThinQ</a>
+                        </li>
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">Tencho 7.3</a>
+                        </li>
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">Tencho 8.1</a>
+                        </li>
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">Nexian</a>
+                        </li>
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">Ningbo</a>
+                        </li>
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">Fix A Phone</a>
+                        </li>
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">Hisense</a>
+                        </li>
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">Force Cell</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#" class="text-decoration-none text-dark fw-bold">SSD Card</a>
+                      <ul class="list-inline">
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">Affinity M20</a>
+                        </li>
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">Affinity P40 Pro</a>
+                        </li>
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">PO V40 ThinQ</a>
+                        </li>
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">Tencho 7.3</a>
+                        </li>
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">Tencho 8.1</a>
+                        </li>
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">Nexian</a>
+                        </li>
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">Ningbo</a>
+                        </li>
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">Fix A Phone</a>
+                        </li>
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">Hisense</a>
+                        </li>
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">Force Cell</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#" class="text-decoration-none text-dark fw-bold">SSD Card</a>
+                      <ul class="list-inline">
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">Affinity M20</a>
+                        </li>
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">Affinity P40 Pro</a>
+                        </li>
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">PO V40 ThinQ</a>
+                        </li>
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">Tencho 7.3</a>
+                        </li>
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">Tencho 8.1</a>
+                        </li>
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">Nexian</a>
+                        </li>
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">Ningbo</a>
+                        </li>
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">Fix A Phone</a>
+                        </li>
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">Hisense</a>
+                        </li>
+                        <li class="ps-3">
+                          <a href="#" class="text-decoration-none text-dark">Force Cell</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <li class="nav-item p-2 mb-1 mx-2">
+                  <a class="nav-link text-dark click2" href="#our-stuff">Shop</a>
+                </li>
+                <li class="nav-item p-2 mb-1 mx-2">
+                  <a class="nav-link text-dark click3" href="#news">Android</a>
+                </li>
+                <li class="nav-item p-2 mb-1 mx-2">
+                  <a class="nav-link text-dark click4" href="#gallery">Accessories</a>
+                </li>
+                <li class="nav-item p-2 mb-1 mx-2">
+                  <a class="nav-link text-dark click5" href="#about">Memory & Storage</a>
+                </li>
+                <li class="nav-item p-2 mx-2 pages-item">
+                  <a class="nav-link text-dark click5 d-flex justify-content-between align-items-center" href="#about">Pages <i class="fa-solid fa-arrow-right pe-3"></i></a>
+                </li>
+                <div class="pages">
+                  <button class="btn pages-back-btn"><i class="fa-solid fa-arrow-left pe-3"></i> Pages</button>
+                  <ul class="list-inline">
+                    <li class="p-3 ps-5"><a href="#" class="text-decoration-none text-dark">About Us</a></li>
+                    <li class="p-3 ps-5"><a href="#" class="text-decoration-none text-dark">Contact Us</a></li>
+                    <li class="p-3 ps-5"><a href="#" class="text-decoration-none text-dark">Blog</a></li>
+                    <li class="p-3 ps-5"><a href="#" class="text-decoration-none text-dark">Faq's</a></li>
+                  </ul>
+                </div>
+              </ul>
+            </div>
+            <div class="offcanvas-footer p-3">
+              <div class="login mb-4 mt-2">
+                <i class="fa-solid fa-user me-2"></i> <a href="#" class="text-dark text-decoration-none">Login</a>
+              </div>
+              <div class="social-icons d-flex gap-3">
+                <a href="#" class="text-dark"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="text-dark"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="text-dark"><i class="fa-brands fa-pinterest"></i></a>
+                <a href="#" class="text-dark"><i class="fa-brands fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 d-none d-xl-flex flex-row">
+            <li class="nav-item mx-2">
+              <a
+                class="nav-link text-black fw-bold active click0"
+                aria-current="page"
+                href="#"
+              >
+                Home
+              </a>
+            </li>
+            <li class="nav-item dropdown mx-2">
+              <a
+                class="nav-link collection-link mx-auto text-black fw-bold dropdown-toggle click1"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">Collection
+              </a>
+            </li>
+            <div class="collection-list position-absolute shadow">
+              <div class="row">
+                <div class="col">
+                  <p class="text-start ps-3">
+                    <a href="#" class="text-decoration-none text-dark fw-bold border-bottom pb-2 mb-2">SSD CARDS</a>
+                  </p>
+                  <ul class="list-inline">
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">Affinity M20</a>
+                    </li>
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">Affinity P40 Pro</a>
+                    </li>
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">PO V40 ThinQ</a>
+                    </li>
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">Tencho 7.3</a>
+                    </li>
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">Tencho 8.1</a>
+                    </li>
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">Nexian</a>
+                    </li>
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">Ningbo</a>
+                    </li>
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">Fix A Phone</a>
+                    </li>
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">Hisense</a>
+                    </li>
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">Force Cell</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <p class="text-start ps-3">
+                    <a href="#" class="text-decoration-none text-dark fw-bold border-bottom pb-2 mb-2">POWER BANKS</a>
+                  </p>
+                  <ul class="list-inline">
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">Affinity M20</a>
+                    </li>
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">Affinity P40 Pro</a>
+                    </li>
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">PO V40 ThinQ</a>
+                    </li>
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">Tencho 7.3</a>
+                    </li>
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">Tencho 8.1</a>
+                    </li>
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">Nexian</a>
+                    </li>
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">Ningbo</a>
+                    </li>
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">Fix A Phone</a>
+                    </li>
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">Hisense</a>
+                    </li>
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">Force Cell</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <p class="text-start ps-3">
+                    <a href="#" class="text-decoration-none text-dark fw-bold border-bottom pb-2 mb-2">EARPHONE</a>
+                  </p>
+                  <ul class="list-inline">
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">Affinity M20</a>
+                    </li>
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">Affinity P40 Pro</a>
+                    </li>
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">PO V40 ThinQ</a>
+                    </li>
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">Tencho 7.3</a>
+                    </li>
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">Tencho 8.1</a>
+                    </li>
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">Nexian</a>
+                    </li>
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">Ningbo</a>
+                    </li>
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">Fix A Phone</a>
+                    </li>
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">Hisense</a>
+                    </li>
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">Force Cell</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <p class="text-start ps-3">
+                    <a href="#" class="text-decoration-none text-dark fw-bold border-bottom pb-2 mb-2">ANDROID</a>
+                  </p>
+                  <ul class="list-inline">
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">Affinity M20</a>
+                    </li>
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">Affinity P40 Pro</a>
+                    </li>
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">PO V40 ThinQ</a>
+                    </li>
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">Tencho 7.3</a>
+                    </li>
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">Tencho 8.1</a>
+                    </li>
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">Nexian</a>
+                    </li>
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">Ningbo</a>
+                    </li>
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">Fix A Phone</a>
+                    </li>
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">Hisense</a>
+                    </li>
+                    <li class="ps-3 pb-1">
+                      <a href="#" class="text-decoration-none text-dark">Force Cell</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <div class="collection-img">
+                    <img src="./assets/imgs/innovate-qualities.webp" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <li class="nav-item mx-2">
+              <a class="nav-link text-black fw-bold click2" href="#our-stuff">Shop</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link text-black fw-bold click3" href="#news">Android</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link text-black fw-bold click4" href="#gallery">Accessories</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link text-black fw-bold click5" href="#about">Memory & Storage</a>
+            </li>
+            <li class="nav-item dropdown mx-2">
+              <a
+                class="nav-link pages-link mx-auto text-black fw-bold dropdown-toggle click1"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">Pages
+              </a>
+            </li>
+            <div class="pages-list position-absolute shadow">
+              <ul class="list-inline">
+                <li class="border-bottom py-2 px-4"><a href="#" class="text-decoration-none text-black">About us</a></li>
+                <li class="border-bottom py-2 px-4"><a href="#" class="text-decoration-none text-black">Contact us</a></li>
+                <li class="border-bottom py-2 px-4"><a href="#" class="text-decoration-none text-black">Blog</a></li>
+                <li class="border-bottom py-2 px-4"><a href="#" class="text-decoration-none text-black">Faq's</a></li>
+              </ul>
+            </div>
+          </ul>
+          </div>
+          <div class="header-icons d-flex align-items-center order-1">
+            <a href="#" class="text-black">
+              <i class="fa-solid fa-user-tie"></i>
+            </a>
+            <a href="#" class="shopping-cart text-black ps-3">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+            <a href="#" class="text-black ps-3">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+            <div class="dropdown flags-dropdown ps-3">
+              <button class="btn btn-secondary flags-btn bg-transparent border-0 text-black dropdown-toggle d-flex align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              </button>
+              <ul class="flags-menu list-inline px-4 shadow rounded overflow-auto" id="dropdown-menu">
+              </ul text-dark>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <section class="hero">
+        <div id="carouselExample" class="carousel slide carousel-fade">
+          <div class="carousel-inner">
+            <!-- Start Carousel Items -->
+            <div class="carousel-item active position-relative">
+              <img src="./assets/imgs/phono-slider-1.webp" class="d-block w-100" alt="...">
+              <div class="hero-text position-absolute text-white text-center hero-text-one">
+                <h2 class="pb-2">Zania Black Edition</h2>
+                <h2 class="pb-2">Curvy Bevel Dual Audio</h2>
+                <div class="hero-btn">
+                  <a href="" class="btn btn-dark border-white rounded-pill p-3 px-5">SHOP NOW</a>
+                </div>
+              </div>
+            </div>
+            <!-- ---- -->
+            <div class="carousel-item position-relative">
+              <img src="./assets/imgs/phono-slider-2.webp" class="d-block w-100" alt="...">
+              <div class="hero-text position-absolute text-sm-black text-center hero-text-two">
+                <h2 class="pb-2">4k RESOLUTION</h2>
+                <h2 class="pb-2">Exclusive Steel Frame</h2>
+                <div class="hero-btn">
+                  <a href="" class="btn btn-light border-black rounded-pill p-3 px-5">SHOP NOW</a>
+                </div>
+              </div>
+            </div>
+            <!-- ---- -->
+            <div class="carousel-item position-relative">
+              <img src="./assets/imgs/phono-slider-3.webp" class="d-block w-100" alt="...">
+              <div class="hero-text position-absolute text-white text-center hero-text-three">
+                <h2 class="pb-2">Delta Zertiga Processor</h2>
+                <h2 class="pb-2">Full Screen Display</h2>
+                <div class="hero-btn">
+                  <a href="" class="btn btn-dark border-white rounded-pill p-3 px-5">SHOP NOW</a>
+                </div>
+              </div>
+            </div>
+            <!-- Start Carousel Items -->
+          </div>
+          <!-- Carousel Prev and Next Buttons -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <div class="prev-hero-container">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </div>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <div class="next-hero-container">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </div>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+    </header>
+    <main>
+      <section class="what-makes-different py-5">
+        <div class="container">
+          <div class="row text-center section-header">
+            <h2>WHAT MAKES THE ESSENTIAL DIFFERENT?</h2>
+            <p class="text-black-50 pt-3">EXPERIENCE HIGH PERFORMANCE AND SECURE</p>
+          </div>
+          <div class="row mt-5 gap-2">
+            <div class="col-12 col-md text-center">
+              <div class="different-img mb-5">
+                <img src="./assets/imgs/different1.webp" alt="">
+              </div>
+              <div class="different-text">
+                <h6><a href="#" class="text-decoration-none text-black">PERFECT CUT</a></h6>
+                <h4><a href="#" class="text-decoration-none text-black">DUAL CAMERA</a></h4>
+                <p class="text-black-50">Tristique senectus et netus et malesuada ant reiet fames.</p>
+              </div>
+            </div>
+            <div class="col-12 col-md text-center">
+              <div class="different-img mb-5">
+                <img src="./assets/imgs/different2.webp" alt="">
+              </div>
+              <div class="different-text">
+                <h6><a href="#" class="text-decoration-none text-black">PRETTY</a></h6>
+                <h4><a href="#" class="text-decoration-none text-black">INTELLIGENT PROCESSING</a></h4>
+                <p class="text-black-50">Consequat ac habit amet asse felis donec et odio pellentesque diam.</p>
+              </div>
+            </div>
+            <div class="col-12 col-md text-center">
+              <div class="different-img mb-5">
+                <img src="./assets/imgs/different3.webp" alt="">
+              </div>
+              <div class="different-text">
+                <h6><a href="#" class="text-decoration-none text-black">MOST POPULAR</a></h6>
+                <h4><a href="#" class="text-decoration-none text-black">8GB DDR5 RAM</a></h4>
+                <p class="text-black-50">Dictum varius duis at consectetur lorem donec massa sap faucibus.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="possibilities py-5">
+        <div class="container">
+          <div class="row section-header text-center">
+            <h2>POSSIBILITIES. PERFORMANCE. POWER.</h2>
+            <p class="text-black-50">FASTER PROCESSING WITH LESS POWER</p>
+          </div>
+          <div class="row position-relative">
+            <img src="./assets/imgs/possibilities.webp" alt="">
+            <div class="dot">
+              <span class="fa fa-circle" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"></span>
+              <div class="pop-container position-absolute p-2">
+                <div class="pop d-none d-lg-block position-relative text-center">
+                  <div class="pop-img">
+                    <img src="./assets/imgs/possibilities1.webp" alt="image">
+                  </div>
+                  <a href="#" class="text-decoration-none text-black">SCORPION PROCESSOR</a>
+                  <p>Tristique senectus et netus et malesuada fames ac turpis.</p>
+                </div>
+              </div>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content rounded-4 position-relative">
+                    <div class="modal-body">
+                      <img src="./assets/imgs/possibilities1.webp" alt="processor">
+                      <h4 class="my-3">SCORPION PROCESSOR</h4>
+                      <p class="fs-6">Tristique senectus et netus et malesuada fames ac turpis.</p>
+                    </div>
+                    <div class="close-modal-btn position-absolute bg-dark p-2 rounded-circle d-flex justify-content-center align-items-center">
+                      <i class="fa-solid fa-x text-white"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dot">
+              <span class="fa fa-circle" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal2"></span>
+              <div class="pop-container position-absolute p-2">
+                <div class="pop d-none d-lg-block position-relative text-center">
+                  <div class="pop-img">
+                    <img src="./assets/imgs/possibilities2.webp" alt="image">
+                  </div>
+                  <a href="#" class="text-decoration-none text-black fw-bold">DUAL SIM CARDS</a>
+                  <p>Donec ultrices tincidunt arcu non sodales neque sodales ut.</p>
+                </div>
+              </div>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content rounded-4 position-relative">
+                    <div class="modal-body">
+                      <img src="./assets/imgs/possibilities2.webp" alt="processor">
+                      <h4 class="my-3">DUAL SIM CARDS</h4>
+                      <p class="fs-6">Donec ultrices tincidunt arcu non sodales neque sodales ut.</p>
+                    </div>
+                    <div class="close-modal-btn position-absolute bg-dark p-2 rounded-circle d-flex justify-content-center align-items-center">
+                      <i class="fa-solid fa-x text-white"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dot">
+              <span class="fa fa-circle" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal3"></span>
+              <div class="pop-container position-absolute p-2">
+                <div class="pop d-none d-lg-block position-relative text-center">
+                  <div class="pop-img">
+                    <img src="./assets/imgs/possibilities3.webp" alt="image">
+                  </div>
+                  <a href="#" class="text-decoration-none text-black fw-bold">48 MP CAMERA</a>
+                  <p>Cursus euismod quis viverra nibh cras pulvinar mattis nunc sed.</p>
+                </div>
+              </div>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content rounded-4 position-relative">
+                    <div class="modal-body">
+                      <img src="./assets/imgs/possibilities3.webp" alt="processor">
+                      <h4 class="my-3">48 MP CAMERA</h4>
+                      <p class="fs-6">Cursus euismod quis viverra nibh cras pulvinar mattis nunc sed.</p>
+                    </div>
+                    <div class="close-modal-btn position-absolute bg-dark p-2 rounded-circle d-flex justify-content-center align-items-center">
+                      <i class="fa-solid fa-x text-white"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dot">
+              <span class="fa fa-circle" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal4"></span>
+              <div class="pop-container position-absolute p-2">
+                <div class="pop d-none d-lg-block position-relative text-center">
+                  <div class="pop-img">
+                    <img src="./assets/imgs/possibilities4.webp" alt="image">
+                  </div>
+                  <a href="#" class="text-decoration-none text-black fw-bold">48 HRS BACKUP</a>
+                  <p>Natoque penatibus et magnis dis parturient montes nascetur.</p>
+                </div>
+              </div>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal4" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content rounded-4 position-relative">
+                    <div class="modal-body">
+                      <img src="./assets/imgs/possibilities4.webp" alt="processor">
+                      <h4 class="my-3">48 HRS BACKUP</h4>
+                      <p class="fs-6">Natoque penatibus et magnis dis parturient montes nascetur.</p>
+                    </div>
+                    <div class="close-modal-btn position-absolute bg-dark p-2 rounded-circle d-flex justify-content-center align-items-center">
+                      <i class="fa-solid fa-x text-white"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="unstoppable-price py-5 mt-lg-5">
+        <div class="container">
+          <div class="text-content text-center text-white py-5 my-5">
+            <p class="pb-2">JENNIFER F., CASPER CUSTOMER</p>
+            <h1 class="pb-4">"Unbeatable price, and it’s super comfortable"</h1>
+            <a href="#" class="btn btn-light rounded-pill p-3 px-5">View More</a>
+          </div>
+        </div>
+      </section>
+      <section class="innovate-qualities pb-5">
+        <div class="container">
+          <div class="row section-header mt-5 py-5 text-center">
+            <h2>INNOVATIVE QUALITIES & FEATURES</h2>
+            <p class="text-black-50">SHOW YOURS TO THE WORLD</p>
+          </div>
+          <div class="row">
+            <div class="col-12 col-sm-6 col-xl-4 order-1 order-xl-0 d-flex flex-column justify-content-between align-items-center">
+              <div class="feat text-center text-sm-end d-flex flex-column flex-xl-row align-items-center align-items-sm-end align-items-xl-center">
+                <div class="feat-text order-1 order-xl-0 pe-xl-4">
+                  <h5><a href="#" class="text-decoration-none text-black">INTELLIGENT PROCESSOR</a></h5>
+                  <p class="text-black-50">Tellus in hac habitasse platea dictumst vestibulum rhoncus srd mana erti qeueri</p>
+                </div>
+                <div class="feat-img">
+                  <img src="./assets/imgs/innovate1.png" alt="">
+                </div>
+              </div>
+              <div class="feat text-center text-sm-end d-flex flex-column flex-xl-row align-items-center align-items-sm-end align-items-xl-center">
+                <div class="feat-text order-1 order-xl-0 pe-xl-4">
+                  <h5><a href="#" class="text-decoration-none text-black">HD SURROUND AUDIO</a></h5>
+                  <p class="text-black-50">Sagittis eu volutpat odio ante ut diam quam metus dictfacilisis mauris sit am.</p>
+                </div>
+                <div class="feat-img">
+                  <img src="./assets/imgs/innovate2.png" alt="">
+                </div>
+              </div>
+              <div class="feat text-center text-sm-end d-flex flex-column flex-xl-row align-items-center align-items-sm-end align-items-xl-center">
+                <div class="feat-text order-1 order-xl-0 pe-xl-4">
+                  <h5><a href="#" class="text-decoration-none text-black">STYLISH BEVEL EDGES</a></h5>
+                  <p class="text-black-50">Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid</p>
+                </div>
+                <div class="feat-img">
+                  <img src="./assets/imgs/innovate3.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-4">
+              <div class="innovate-img d-flex justify-content-center mx-auto">
+                <img src="./assets/imgs/innovate-qualities.webp" class="w-100" alt="">
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-xl-4 order-1 order-xl-0 d-flex flex-column justify-content-between align-items-center">
+              <div class="feat text-center text-sm-start d-flex flex-column flex-xl-row align-items-center align-items-sm-start align-items-xl-center">
+                <div class="feat-img">
+                  <img src="./assets/imgs/innovate4.png" alt="">
+                </div>
+                <div class="feat-text ps-xl-4">
+                  <h5><a href="#" class="text-decoration-none text-black">INTELLIGENT PROCESSOR</a></h5>
+                  <p class="text-black-50">Tellus in hac habitasse platea dictumst vestibulum rhoncus srd mana erti qeueri</p>
+                </div>
+              </div>
+              <div class="feat text-center text-sm-start d-flex flex-column flex-xl-row align-items-center align-items-sm-start align-items-xl-center">
+                <div class="feat-img">
+                  <img src="./assets/imgs/innovate5.png" alt="">
+                </div>
+                <div class="feat-text ps-xl-4">
+                  <h5><a href="#" class="text-decoration-none text-black">HD SURROUND AUDIO</a></h5>
+                  <p class="text-black-50">Sagittis eu volutpat odio ante ut diam quam metus dictfacilisis mauris sit am.</p>
+                </div>
+              </div>
+              <div class="feat text-center text-sm-start d-flex flex-column flex-xl-row align-items-center align-items-sm-start align-items-xl-center">
+                <div class="feat-img">
+                  <img src="./assets/imgs/innovate6.png" alt="">
+                </div>
+                <div class="feat-text ps-xl-4">
+                  <h5><a href="#" class="text-decoration-none text-black">STYLISH BEVEL EDGES</a></h5>
+                  <p class="text-black-50">Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="new-arrivals py-5">
+        <div class="container-fluid">
+          <div class="row section-header pb-5 text-center">
+            <h2>NEW ARRIVALS</h2>
+            <p class="text-black-50">FIND THE PERFECT PHONE FOR YOU</p>
+          </div>
+          <div class="main-slider-container position-relative mx-auto">
+            <div class="prev-btn-container bg-dark p-2 position-absolute  d-flex justify-content-center align-items-center rounded-circle">
+              <div class="prev-btn"></div>
+            </div>
+            <div class="swiper-slider d-flex overflow-hidden mx-auto">
+              <div class="swiper-container d-flex gap-3 position-relative">
+                <!-- Cards will be Generated by JavaScript -->
+              </div>
+            </div>
+            <div class="next-btn-container bg-dark p-2 position-absolute  d-flex justify-content-center align-items-center rounded-circle">
+              <div class="next-btn"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="squares">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 col-md-8 order-1 order-md-0">
+              <div class="row">
+                <div class="col-12 col-sm-6 p-0">
+                  <div class="square-img-container w-100 h-100 position-relative">
+                    <img src="./assets/imgs/squares1.png" class="w-100 h-100 object-fit-cover" alt="">
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 p-0">
+                  <div class="square-img-container w-100 h-100 position-relative">
+                    <img src="./assets/imgs/squares2.png" class="w-100 h-100 object-fit-cover" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-6 p-0">
+                  <div class="square-img-container w-100 h-100 position-relative">
+                    <img src="./assets/imgs/squares4.png" class="w-100 h-100 object-fit-cover" alt="">
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 p-0">
+                  <div class="square-img-container w-100 h-100 position-relative">
+                    <img src="./assets/imgs/squares5.png" class="w-100 h-100 object-fit-cover" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 p-0">
+              <div class="square-img-container col-img w-100 h-100 position-relative">
+                <img src="./assets/imgs/squares3.png" class="w-100 h-100 object-fit-cover" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="customers py-5">
+        <div class="container">
+          <div class="row section-header pb-5 text-center text-white">
+            <h2>SEE WHY CUSTOMERS LOVE THE OUR MOBILES</h2>
+            <p class="text-white-50"> DESIGNED TO PERFECTION</p>
+          </div>
+          <div class="row">
+            <div class="col-12 col-lg-6">
+              <div class="customers-img pb-5 pb-lg-0">
+                <img src="./assets/imgs/customers.jpg" class="object-fit-cover mw-100" alt="customers-img">
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item border-0 bg-transparent text-white">
+                  <h2 class="accordion-header border-bottom">
+                    <button class="accordion-button bg-transparent shadow-none text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      NEW GRADIENT COLOR FINISHES
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      Rierem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                      Duis aute irure dolor in reprehenderit in voluptate velit 
+                      esse cillum dolore eu fugiat nulla pariatur. 
+                      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui official.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item border-0 bg-transparent text-white">
+                  <h2 class="accordion-header border-bottom">
+                    <button class="accordion-button bg-transparent shadow-none text-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      FOUR-SIDED CURVED CERAMIC BODY
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                      Duis aute irure dolor in reprehenderit in voluptate velit 
+                      esse cillum dolore eu fugiat nulla pariatur. 
+                      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui official.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item border-0 bg-transparent text-white">
+                  <h2 class="accordion-header border-bottom">
+                    <button class="accordion-button bg-transparent shadow-none text-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      4000MAH HIGH-CAPACITY BATTERY
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                      Duis aute irure dolor in reprehenderit in voluptate velit 
+                      esse cillum dolore eu fugiat nulla pariatur. 
+                      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui official.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item border-0 bg-transparent text-white">
+                  <h2 class="accordion-header border-bottom">
+                    <button class="accordion-button bg-transparent shadow-none text-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      FULLY HIDDEN CAMERA LENS
+                    </button>
+                  </h2>
+                  <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                      Duis aute irure dolor in reprehenderit in voluptate velit 
+                      esse cillum dolore eu fugiat nulla pariatur. 
+                      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui official.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="phono-support py-5">
+        <div class="container-fluid">
+          <div class="row section-header pb-5 text-center">
+            <h2>WELCOME TO PHONO SUPPORT. WE'RE HERE TO HELP.</h2>
+            <p class="text-black-50">ALWAYS ON YOUR SIDE WHEN YOU NEED HELP</p>
+          </div>
+          <div class="row">
+            <div class="col-12 col-sm">
+              <div class="support-card d-flex border p-4 rounded-3 mb-5 mb-sm-0">
+                <div class="support-img">
+                  <img src="./assets/imgs/support1.jpg" alt="">
+                </div>
+                <div class="support-info ps-2">
+                  <h6>HAVE ANY DOUBTS?</h6>
+                  <h4>CALL US NOW</h4>
+                  <p>This Number is Toll Free</p>
+                  <p>0000 - 123 - 456789</p>
+                  <a href="#" class="btn btn-dark rounded-pill p-3 px-4 position-sm-absolute">View More</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm">
+              <div class="support-card d-flex border p-4 rounded-3">
+                <div class="support-img">
+                  <img src="./assets/imgs/support2.jpg" alt="">
+                </div>
+                <div class="support-info ps-2">
+                  <h6>WANNA TALK TO US?</h6>
+                  <h4>LIVE CHAT NOW</h4>
+                  <p>
+                    Nullam quis ante. Etiam sit amet orci eget eros faucibus 
+                    tincidunt. Duis leo.Lorem ipsum dolor
+                  </p>
+                  <a href="#" class="btn btn-dark rounded-pill p-3 px-4 position-sm-absolute">View More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="py-5 text-white">
+      <div class="container">
+        <div class="main-content text-center">
+          <h6 class="pb-2">SUBSCRIBE NOW</h6>
+          <h2 class="pb-2">GET OUR UPDATES ALWAYS FAST</h2>
+          <p class="pb-2">YOUR PERSONAL DATA WILL ALWAYS BE SAFE</p>
+          <div class="input-group mb-5 mx-auto position-relative">
+            <input type="text" id="footer-input" placeholder="Enter your email id" class="form-control shadow-none rounded-pill p-2" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <button class="rounded-circle position-absolute"></button>
+          </div>
+        </div>
+        <div class="footer-links">
+          <ul class="list-inline d-flex flex-column flex-md-row justify-content-center align-items-center">
+            <li class="pb-4"><a href="#" class="text-decoration-none text-white">SEARCH</a></li>
+            <li class="pb-4"><a href="#" class="text-decoration-none text-white">HELP</a></li>
+            <li class="pb-4"><a href="#" class="text-decoration-none text-white">INFORMATION</a></li>
+            <li class="pb-4"><a href="#" class="text-decoration-none text-white">PRIVACY POLICY</a></li>
+            <li class="pb-4"><a href="#" class="text-decoration-none text-white">SHIPPING DETAILS</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="./assets/js/script.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+

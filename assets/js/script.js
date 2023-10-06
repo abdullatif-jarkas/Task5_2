@@ -135,7 +135,11 @@ let modal = document.querySelectorAll(".modal");
 modalCloseBtn.forEach((element) => {
   element.addEventListener("click", () => {
     modal.forEach((el) => {
-      // el.classList.remove()
+      let modalBackdrop = document.querySelectorAll(".modal-backdrop");
+      modalBackdrop.forEach((back) => {
+        back.style.opacity = 0;
+      })
+      el.classList.remove("show");
     });
   });
 });
@@ -213,7 +217,7 @@ nextBtn.addEventListener("click", () => {
 let cartBody = document.querySelector(".cart-body");
 
 function addToCart() {
-  cartBody.innerHTML +=`
+  cartBody.innerHTML += `
   <div class="item">
     <div class="item-img">
       <img src="./assets/imgs/arrival1.png" alt="">
@@ -231,49 +235,49 @@ function addToCart() {
       </div>
     </div>
   </div>
-  `
+  `;
 }
 
 // Customers Accordion
-let accordionBtn = document.querySelectorAll('.customers .accordion-button');
+let accordionBtn = document.querySelectorAll(".customers .accordion-button");
 accordionBtn.forEach((item, index) => {
   let menuItem = document.querySelector(`.menu-item-${index}`);
-  if(menuItem.parentElement.classList.contains('collapsed')) {
+  if (menuItem.parentElement.classList.contains("collapsed")) {
     menuItem.innerHTML = `
     <div class="menu-item">
       <span class="one"></span>
       <span class="two"></span>
       <span class="three"></span>
     </div>
-    `
+    `;
   } else {
-    menuItem.innerHTML = `<i class="fa-solid fa-x fs-3"></i>`
+    menuItem.innerHTML = `<i class="fa-solid fa-x fs-3"></i>`;
   }
-  item.addEventListener('click', () => {
-    if(menuItem.parentElement.classList.contains('collapsed')) {
+  item.addEventListener("click", () => {
+    if (menuItem.parentElement.classList.contains("collapsed")) {
       menuItem.innerHTML = `
       <div class="menu-item menu-item-3">
         <span class="one"></span>
         <span class="two"></span>
         <span class="three"></span>
       </div>
-      `
+      `;
     } else {
-      menuItem.innerHTML = `<i class="fa-solid fa-x fs-3"></i>`
+      menuItem.innerHTML = `<i class="fa-solid fa-x fs-3"></i>`;
     }
     accordionBtn.forEach((item, index) => {
       let menuItem = document.querySelector(`.menu-item-${index}`);
-      if(menuItem.parentElement.classList.contains('collapsed')) {
+      if (menuItem.parentElement.classList.contains("collapsed")) {
         menuItem.innerHTML = `
         <div class="menu-item">
           <span class="one"></span>
           <span class="two"></span>
           <span class="three"></span>
         </div>
-        `
+        `;
       } else {
-        menuItem.innerHTML = `<i class="fa-solid fa-x fs-3"></i>`
+        menuItem.innerHTML = `<i class="fa-solid fa-x fs-3"></i>`;
       }
-    })
-  })
-})
+    });
+  });
+});

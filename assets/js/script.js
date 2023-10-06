@@ -16,8 +16,6 @@ function preventDefaultForScrollKeys(e) {
     return false;
   }
 }
-
-// modern Chrome requires { passive: false } when adding event
 var supportsPassive = false;
 try {
   window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
@@ -28,15 +26,12 @@ try {
 var wheelOpt = supportsPassive ? { passive: false } : false;
 var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
 
-// call this to Disable
 function disableScroll() {
-  window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
-  window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
-  window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
+  window.addEventListener('DOMMouseScroll', preventDefault, false);
+  window.addEventListener(wheelEvent, preventDefault, wheelOpt);
+  window.addEventListener('touchmove', preventDefault, wheelOpt);
   window.addEventListener('keydown', preventDefaultForScrollKeys, false);
 }
-
-// call this to Enable
 function enableScroll() {
   window.removeEventListener('DOMMouseScroll', preventDefault, false);
   window.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
@@ -64,13 +59,17 @@ fetch("https://restcountries.com/v3.1/all")
   .then(function (res) {
     for (let index = 0; index < 100; index++) {
       flagsMenu.innerHTML += `
-        <li class="my-2 py-1 border-bottom"><a class="dropdown-item d-flex justify-content-between" href="#">${res[index].flag} <img src=${res[index].flags.png} alt='flag-image'></a></li>
+        <li class="my-2 py-1 border-bottom">
+          <a class="dropdown-item d-flex justify-content-between" href="#">${res[index].cca2} 
+          <img src=${res[index].flags.png} alt='flag-image'>
+          </a>
+        </li>
       `;
     }
     let flagsBtn = document.querySelector(".flags-btn");
     let flagsItems = document.querySelectorAll(".flags-menu li");
     flagsBtn.innerHTML = `
-      <div>${res[98].flag} <img src=${res[98].flags.png}></div>
+      <div>${res[98].cca2} <img src=${res[98].flags.png}></div>
     `;
     flagsItems.forEach((item) => {
       item.addEventListener("click", () => {
